@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e9e9ee;
+    font-family:'Noto Sans KR','Segoe UI',sans-serif;
+}
+
+/* 카드 */
+.container{
+    width:380px;
+    padding:40px 45px;
+    border-radius:16px;
+
+    background:linear-gradient(135deg,#e9e9ee,#cfcfdc);
+
+    box-shadow:
+    8px 8px 18px rgba(0,0,0,0.15),
+    -6px -6px 12px rgba(255,255,255,0.7);
+}
+
+/* 제목 */
+h1{
+    text-align:center;
+    color:#4a5bbf;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+/* 입력 줄 */
+.text{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:18px 0;
+
+    font-size:16px;
+    font-weight:600;
+    color:#5b6bc0;
+}
+
+/* 입력칸 */
+input{
+    width:180px;
+    padding:10px 12px;
+
+    border-radius:8px;
+    border:none;
+
+    background:#f3f3f7;
+
+    box-shadow:
+    inset 2px 2px 6px rgba(0,0,0,0.15),
+    inset -2px -2px 6px rgba(255,255,255,0.9);
+
+    font-size:14px;
+}
+
+/* 결과 값 */
+.value{
+    font-weight:600;
+    color:#333;
+}
+
+/* 버튼 */
+button{
+    width:100%;
+    margin-top:30px;
+    padding:12px;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:16px;
+    font-weight:600;
+    color:white;
+
+    background:linear-gradient(90deg,#c3c5e8,#2f49a8);
+
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.25);
+}
+</style>
+</head>
+<body>
+	<form action="BMI_Out.jsp" method="post" enctype="multipart/form-data">
+
+		<div class="container">
+			<div>
+				<h1>BMI 검사</h1>
+			</div>
+			<div class="text">
+				이름<input name="name">
+			</div>
+			<div class="text">
+				키(CM)<input name="height">
+			</div>
+			<div class="text">
+				체중(KG)<input name="weight">
+			</div>
+			<div>
+				<div>사진</div>
+				<div>
+					<input type="file" name="imgFile">
+				</div>
+			</div>
+			<div class="text">
+				<button>검사</button>
+			</div>
+		</div>
+	</form>
+
+
+
+</body>
+</html>

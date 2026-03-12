@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style >
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.converter {
+  width: 320px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.converter h2 {
+  margin-bottom: 20px;
+}
+
+.converter label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.converter input,
+.converter select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.converter button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.converter button:hover {
+  background-color: #45a049;
+}
+</style>
+
+</head>
+<body>
+	<div class = "converter">
+		<h2>단위변환</h2>
+		<form action="unit.jsp">
+
+			변환할 값<input class="box" name="value"><br>
+			<div class="box">단위</div>
+			<select name="unit">
+				<option value="a">cm -> inch</option>
+				<option value="b">㎡ -> 평</option>
+				<option value="c">℃ -> °F</option>
+				<option value="d">km/h -> mi/h</option>
+			</select>
+			<button>변환하기</button>
+		</form>
+	</div>
+
+
+</body>
+</html>
