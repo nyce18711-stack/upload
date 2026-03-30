@@ -1,0 +1,35 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSP - Hello World</title>
+</head>
+<body>
+
+<form action="bmi" method="post">
+    <div>관심사 리스트</div>
+    <div>
+        회원 이름:<input type="text" name="name"/>
+    </div>
+
+    <div>
+        나이 : <input type="text" name="age"/>
+    </div>
+    <div>
+        성별 : <label><input type="radio" name="gender" value="male">남</label>
+        <label><input type="radio" name="gender" value="female">여</label>
+    </div>
+    <div>
+        <labe><input type="checkbox" name="habit" value="exer">운동</labe>
+        <labe><input type="checkbox" name="habit" value="cook">요리</labe>
+        <labe><input type="checkbox" name="habit" value="dev">개발</labe>
+    </div>
+
+    <div>
+        <button>확인</button>
+    </div>
+</form>
+
+
+</body>
+</html>

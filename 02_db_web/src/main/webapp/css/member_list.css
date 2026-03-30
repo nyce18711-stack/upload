@@ -1,0 +1,108 @@
+/* 기본 테마 변수 (색상 관리 용이) */
+:root {
+    --primary-color: #3b82f6; /* 호버 포인트 색상 (블루) */
+    --text-name: #1a202c;     /* 이름 색상 (매우 짙은 그레이) */
+    --text-age: #718096;      /* 나이 색상 (중간 그레이) */
+    --border-color: #e2e8f0;
+    --header-bg: #f8fafc;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px; /* 좀 더 부드러운 라운드 */
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 헤더 & 행 공통 */
+.table-header, .table-row {
+    display: flex;
+    align-items: center;
+    position: relative; /* 호버 포인트 바 위치용 */
+}
+
+/* 헤더 스타일 */
+.table-header {
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--border-color); /* 헤더 아래는 조금 더 두껍게 */
+    color: #4a5568;
+    font-weight: 700;
+    text-transform: uppercase; /* 대문자 변환 (선택사항) */
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+/* 일반 행 스타일 */
+.table-row {
+    border-bottom: 1px solid var(--border-color);
+    background-color: #ffffff;
+    /* 호버 효과를 위한 트랜지션 (배경, 그림자, 위치) */
+    transition: all 0.2s ease-in-out;
+    z-index: 1; /* 그림자가 아래 행에 가리지 않도록 */
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+/* 셀 공통 스타일 */
+.table-header > div,
+.table-row > div {
+    flex: 1;
+    padding: 16px 20px; /* 여백을 조금 더 넓게 */
+    font-size: 15px;
+}
+
+/* --- [핵심] 값 이름 색상 구분 --- */
+
+/* 이름 열: 크고 진하게 */
+.table-row .cell-name {
+    color: var(--text-name);
+    font-weight: 600;
+}
+
+/* 나이 열: 약간 연하게, 숫자 우측 정렬(선택사항) */
+.table-row .cell-age {
+    color: var(--text-age);
+    /* 숫자는 우측 정렬이 보기 좋습니다. 필요없으면 주석 처리 */
+    /* text-align: right; */
+}
+
+
+/* --- [핵심] 확실한 호버(Hover) 효과 --- */
+
+.table-row:hover {
+    background-color: #f0f7ff; /* 아주 연한 블루톤 배경 */
+    transform: translateY(-2px); /* 살짝 위로 떠오르는 효과 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 2; /* 떠오를 때 위로 오게 */
+}
+
+/* 호버 시 왼쪽에 컬러 포인트 바 생성 */
+.table-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px; /* 바 두께 */
+    background-color: var(--primary-color);
+    transform: scaleY(0); /* 평소에는 숨김 */
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0 4px 4px 0;
+}
+
+.table-row:hover::before {
+    transform: scaleY(1); /* 호버 시 나타남 */
+}
+
+/* 클릭 시 피드백 */
+.table-row:active {
+    background-color: #e0efff;
+    transform: translateY(0); /* 다시 내려옴 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}

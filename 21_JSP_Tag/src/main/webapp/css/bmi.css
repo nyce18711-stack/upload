@@ -1,0 +1,130 @@
+/* 회원 정보 카드 스타일 */
+.info-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center; /* 내부 요소 전체 중앙 정렬 */
+}
+
+.info-container hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #3b82f6, transparent);
+    margin-bottom: 30px;
+}
+
+.info-container h1 {
+    font-size: 1.2rem;
+    color: #475569;
+    margin: 15px 0;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between; /* 라벨과 데이터 분리 */
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* 제목(라벨) 부분 강조 */
+.info-container h1 span.label {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* 결과(데이터) 부분 강조 */
+.info-container h1 span.value {
+    color: #3b82f6;
+}
+
+.info-title {
+    font-size: 1.8rem !important;
+    color: #1e293b !important;
+    margin-bottom: 10px !important;
+    border-bottom: none !important;
+}
+
+/* 폼 컨테이너 */
+form {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+/* 제목 스타일 */
+form div:first-child {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* 텍스트 입력창 스타일 */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* 라디오 & 체크박스 그룹 */
+label {
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 0.95rem;
+    color: #475569;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #3b82f6; /* 포인트 컬러 적용 */
+    width: 18px;
+    height: 18px;
+}
+
+/* 확인 버튼 스타일 */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+/* 라벨 텍스트 정렬 */
+div > span {
+    display: block;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 5px;
+}

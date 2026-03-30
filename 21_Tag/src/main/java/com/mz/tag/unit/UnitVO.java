@@ -1,0 +1,16 @@
+package com.mz.tag.unit;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class UnitVO {
+    private double num;
+    private String unit;
+    private String colorC;
+    private String result;
+    private String convertedUnit;
+}
